@@ -4,7 +4,11 @@ import tasks
 task_list = []
 
 # welcome message
-print("WELCOME TO THE TASK LIST MANAGER!\nYou can use these commands:\n* 'add' to add a task to the list.\n* 'remove' to remove a task from the list.\n* 'done' to quit the task list manager.")
+print("WELCOME TO THE TASK LIST MANAGER!")
+print("You can use these commands:")
+print("* 'add' to add a task to the list.")
+print("* 'remove' to remove a task from the list.")
+print("* 'done' to quit the task list manager.")
 
 # handling commands
 command = ""
@@ -15,8 +19,10 @@ while not (command == "done"):
     print(f"{tasks.add_task(task_list,task)}\nCurrent task list: {task_list}")
   elif (command == "remove"): # remove task
     task = input("Which task do you want to remove?\n")
-    print(f"{tasks.remove_task(task_list,task)}\nCurrent task list: {task_list}")
+    print(f"{tasks.remove_task(task_list,task)}")
+    print("Current task list: {task_list}")
   elif (command == "done"): # quit
-    print("    // \n  _oo\ \n (__/ \ \nThank you for using the task manager.")
+    print("    // \n  _oo\ \n (__/ \ ")
+    print("Thank you for using the task manager.")
   else: # command not recognized
     print("Wrong command, please try again.")
