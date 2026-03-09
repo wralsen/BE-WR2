@@ -13,5 +13,5 @@ def remove_task(task_list, task):
     task_list.remove(task)
     return "The task is removed from the task list."
   except ValueError as err:
-    return "The task is not in the task list."
+    return "This task is not in the task list."
 
