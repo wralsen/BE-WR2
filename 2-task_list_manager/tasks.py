@@ -3,7 +3,7 @@
 # * remove_task(task_list, task)
 def add_task(task_list, task):
   if (task in task_list):
-    return "The task was already in the task list."
+    return "This task was already in the task list."
   else:
     task_list.append(task)
   return "Task added."
@@ -11,7 +11,7 @@ def add_task(task_list, task):
 def remove_task(task_list, task):
   try:
     task_list.remove(task)
-    return "The task is removed from the task list."
+    return "Task removed."
   except ValueError as err:
     return "This task is not in the task list."
 
