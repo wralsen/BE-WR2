@@ -2,6 +2,6 @@
 
 Working in silos creates issues such as inconsistent architecture and design, poor integration, lack of code reusage and wasted developer time, and does not take full advantage of the the shared knowledge of the team.
 
-Practices like documentation, systematic testing, version control and collaborative programming forces this by making developers communicate, discuss and think before coding.
+Practices like systematic testing and collaborative programming forces developers to communicate, discuss and think before coding.
 
-Documentation can be tedious and feel pointless there and then, but it can be very important in particular in large teams or in projects that are complex and/or run over long periods of time.
+Practices like documentation and version control preserves knowledge about system history, important decisions that were made and how the code is intented to work. This is particularily important in large teams or in projects that are complex and/or run over long periods of time.
