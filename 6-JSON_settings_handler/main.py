@@ -13,7 +13,7 @@ def print_current_settings(settings):
 print("~~ Welcome to the JSON Settings Handler ~~")
 
 try: # read file
-  filename = "innleveringer/BE-WR2/6-JSON_settings_handler/settings.json" # Note: VSC requres path from working directory, not script directory
+  filename = "settings.json" # Note: VSC requres full path from working directory, not script directory
   io = open(filename, 'r')
   settings = json.load(io)
   io.close()
