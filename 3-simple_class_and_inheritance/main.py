@@ -19,5 +19,6 @@ class Student (Person): # inherits Person
   def greet(self):
     return super().greet() + " My student id is " + self.student_id + "."
 
-Anne = Student("Anne", 27,"323")
-print(Anne.greet())
+# Test code
+new_student = Student("Anne", 27, "323")
+print(new_student.greet()) # Prints name, age and student_id
