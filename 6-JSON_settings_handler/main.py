@@ -15,15 +15,13 @@ print("~~ Welcome to the JSON Settings Handler ~~")
 try: # read file
   filename = "settings.json"
   # Comment out the next line when not running from my VSC setup as VSC requires path from working directory and not script directory 
-  filename = "innleveringer/BE_WR2/BE-WR2/6-JSON_settings_handler/"+filename
+  filename = "innleveringer/BE-WR2/6-JSON_settings_handler/"+filename
   io = open(filename, 'r')
   settings = json.load(io)
   io.close()
 
   print_current_settings(settings)
-
   print("Enter the number of the setting you want to change.") 
-  # using numbers instead of keys complicates the code but makes me learn more about dictionaries and exceptions in Python
   
   try:
     setting_to_change = int(input()) # throws exeption if input is not integer
@@ -34,7 +32,7 @@ try: # read file
       print(f"You want to change the {setting_key}.")
       new_value = input("Please type the new value:\n")
       settings[setting_key] = new_value # update setting
-      print("Setting is updated.")
+      print("Setting is updated.") # user feedback is important
       print_current_settings(settings)
   except (TypeError, ValueError):
     setting_to_change = input("You did not type a valid integer. Please try again.\n")

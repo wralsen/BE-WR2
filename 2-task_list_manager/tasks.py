@@ -2,7 +2,7 @@
 # * add_task(task_list, task)
 # * remove_task(task_list, task)
 def add_task(task_list, task):
-  if (task in task_list):
+  if (task in task_list): # avoid duplicates
     return "This task was already in the task list."
   else:
     task_list.append(task)
@@ -15,3 +15,6 @@ def remove_task(task_list, task):
   except ValueError as err:
     return "This task is not in the task list."
 
+def print_list(task_list):
+  print("Current task list:")
+  print("* "+"\n* ".join(task_list))
