@@ -13,9 +13,7 @@ def print_current_settings(settings):
 print("~~ Welcome to the JSON Settings Handler ~~")
 
 try: # read file
-  filename = "settings.json"
-  # Comment out the next line when not running from my VSC setup as VSC requires path from working directory and not script directory 
-  filename = "innleveringer/BE-WR2/6-JSON_settings_handler/"+filename
+  filename = "innleveringer/BE-WR2/6-JSON_settings_handler/settings.json" # Note: VSC requres path from working directory, not script directory
   io = open(filename, 'r')
   settings = json.load(io)
   io.close()
@@ -34,8 +32,10 @@ try: # read file
       settings[setting_key] = new_value # update setting
       print("Setting is updated.") # user feedback is important
       print_current_settings(settings)
-  except (TypeError, ValueError):
-    setting_to_change = input("You did not type a valid integer. Please try again.\n")
+  except TypeError:
+    print("You did not type an integer.")
+  except ValueError:
+    print("You did not type a number corresponding to a setting.")
 
   # update file
   io = open(filename, 'w')
@@ -44,5 +44,4 @@ try: # read file
   print("Thank you for using the JSON Settings Handler.")
 
 except FileNotFoundError:
-  print("The settings file could not be found.")
-
+  print("The JSON settings file could not be found.")
